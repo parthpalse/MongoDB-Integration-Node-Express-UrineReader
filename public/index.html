@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Application Form</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0fdf4; margin: 0; padding: 40px; }
+    .container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-top: 5px solid #16a34a; }
+    h2 { color: #15803d; text-align: center; margin-top: 0; }
+    label { display: block; margin-top: 15px; font-weight: 600; font-size: 14px; color: #374151; }
+    input[type="text"], input[type="email"], select, textarea {
+      width: 100%; padding: 10px; margin-top: 6px; border: 1px solid #d1d5db; border-radius: 6px; box-sizing: border-box; font-size: 14px;
+    }
+    textarea { resize: vertical; height: 80px; }
+    button {
+      margin-top: 25px; width: 100%; background: #16a34a; color: white; padding: 12px; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.2s;
+    }
+    button:hover { background: #15803d; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Application Form</h2>
+    <form action="/submit" method="POST">
+      <label>Student Name:</label>
+      <input type="text" name="name" value="Parth Palse" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" value="parth.palse@somaiya.edu" required>
+
+      <label>Phone:</label>
+      <input type="text" name="phone" value="9876543210" required>
+
+      <label>Course:</label>
+      <select name="course" required>
+        <option value="">Select Course</option>
+        <option value="Computer Engineering">Computer Engineering</option>
+        <option value="Electronics & Computer Engineering" selected>Electronics & Computer Engineering</option>
+        <option value="Mechanical Engineering">Mechanical Engineering</option>
+        <option value="Information Technology">Information Technology</option>
+      </select>
+
+      <label>Address:</label>
+      <textarea name="address" required>Somaiya Vidyavihar, Vidyavihar East, Mumbai - 400077</textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+</body>
+</html>
+
